@@ -6,12 +6,13 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Questao04 - </title>
+        <title>Questao07</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="estilo.css" rel="stylesheet" type="text/css"/>
         <script src="funcoesQuestoes.js" type="text/javascript"></script>
-        <script src="jquery.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        
     </head>
     <body>
         <header>
@@ -21,31 +22,28 @@ and open the template in the editor.
             </center>
         </header>
         <div>
-            <h1>4. Faça um programa JavaScript em que o usuário informará a sua
-                idade e o programa emitirá
-                uma mensagem dizendo se o usuário e ou não menor de idade.</h1>
+            <h1>7. Se listarmos todos os números naturais abaixo de 10 que são múltiplos de 3 ou 5, obtemos 3, 5, 6 e 9. A soma desses múltiplos é 23. Faça um programa JavaScript que encontre a soma de todos os múltiplos de 3 ou 5 abaixo de 1000.</h1>
             <center>
                 <table>
                     <tr>
-                        <td colspan="2">SABER SE É DE MAIOR OU NÃO</td>
+                        <td>APERTE PARA SABER A SOMA DOS MULTIPLOS DE 3 E 5</td>
                     </tr>
                     <tr>
-                        <td>
-                            Digite a idade: 
-                        </td>
-                        <td><input type="number" id="idade" size="30" value="" required></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><input type="submit" value="VERIFICAR!" onclick="return maiorIdade(idade)"></td>
+                        <td><input type="button" value="FIM DO MUNDO" onClick="multiplo3e5()"></td>
                     </tr>
                 </table>  
             </center>
         </div>
-        
-        
-    </body>
+    <center>
+        <div id="resultado">
+            <h1 id="aqui">RESULTADO</h1>
+        </div>
+    </center>
+    
+    
+</body>
     <footer class="rodape">
-            <iframe width="500" height="auto" class="iframeRodape" src="rodape.html" frameborder="0"  allowfullscreen></iframe>
+            <iframe width="500" class="iframeRodape" src="rodape.html" frameborder="0"  allowfullscreen></iframe>
     </footer>
     
 </html>
