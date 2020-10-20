@@ -1,0 +1,48 @@
+header{
+    background-color: yellowgreen;
+}
+.div{
+    background-color: captiontext;
+}
+.msn{
+    color: red;
+    
+}
+
+table{
+    align-content: center;
+    /*margin-left:	auto;
+    margin-right:	auto;
+    width: 1024px;*/
+    border: 6px solid purple;
+    border-left-color: greenyellow;
+    border-right-color: blue;
+    background-color: azure;
+}
+td{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    text-align-last: center;
+    text-justify: auto;
+    border: 2px solid black;
+}
+
+.iframeRodape{
+    position: absolute;
+    overflow:auto;
+    width: 640px;
+    height: 385px;
+ 
+    /*top: 40%;
+    left: 20%;
+ 
+    margin-top: -150px;
+    margin-left: -200px;*/
+}
+
+
+
+#nesse{
+    text-align: center;
+}
