@@ -141,7 +141,7 @@ function numeroprimo(){
     let d1 = 0;
     let psp = 3;
     let p = 0;
-    let pmx = 20;
+    let pmx = 30;
     let cont = 6;
     let status = false;
     //primos do exercicio 2 3 5 7 11 13
@@ -152,7 +152,7 @@ function numeroprimo(){
     //Regra: Primo Não pode ser um numero par
     while(cont<pmx+1){
         num = num +1;
-        console.log("Suposto primo: "+ num);
+        //console.log("Suposto primo: "+ num);
         if(num%2 != 0){ //Regra do par
             //console.log("REGRA DE 2");
             //Proxima regra: Sona os digitos não poder ser divisivel por 3
@@ -171,30 +171,35 @@ function numeroprimo(){
                     //divisão pelo primo p testando os primos ate quociente ser menor que que o numero P e/ou o resto for diferente de 0
                     
                     do{
+                        
                         if(num%p!=0){
                             p = primos[psp]
                             psp = psp +1;
-                            d1 = Math.round(num/p); // controle
-                            console.log("O resultado de " +num+ " dividido por "+p+" deve ser igual a: "+ d1); 
+                            d1=num%p;
+                            console.log("O resto de " +num+ " dividido por "+p+" deve ser igual a: "+ d1);                             
+                            //d1 = Math.round(num/p); // controle
+                            //console.log("O resultado de " +num+ " dividido por "+p+" deve ser igual a: "+ d1); 
                             somad = num%p; //controle 
-                            console.log("O RESTO" +num+ " dividido por "+p+" é "+ somad); 
-                                if(Math.round(num/p)>p && num%p!=0){
-                                    console.log("PASSOU PELOS TESTES NOS PRIMOS: "+num);
+                            alert("TESTANDO PRIMO: "+p);
+                            alert("valor de num: "+num);
+                                if(Math.round(num/p)>p){
+                                    alert("PASSOU PELOS TESTES NOS PRIMOS: "+num);
                                     primos.push(num);
                                     cont = cont+1;
                                     status=true;
-                                    console.log("Status do teste PRIMO: "+status);
+                                    console.log("Status do teste PRIMO(true): "+status);
                                     //console.log(cont);
                                 //console.log("TESTE FINAL: "+ num);
                                 }else{
                                     status = false;
-                                    console.log("Status do teste PRIMO: "+status);
+                                    alert("Status do teste PRIMO(else): "+status);
                                 }
                         }else{
                             status = true;
-                            console.log("Status do teste: "+status);
-                        }
+                            alert("Status do teste: "+status);
+                        }    
                     }while(status==false)
+                    psp=3;
                     // continua dando tudo errado!
                         
                     
@@ -206,7 +211,7 @@ function numeroprimo(){
 
     d1=1;
     for(let i = 0; i< primos.length; i++){
-        console.log("Primo "+d1+" é "+primos[i]);
+        //console.log("Primo "+d1+" é "+primos[i]);
         imprimos += primos[i] + ", ";
         d1++;
     }
